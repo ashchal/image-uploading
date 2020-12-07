@@ -53,7 +53,9 @@ function App() {
             onChange={(e) => onChange(e)}
           />
         </div>
-        <button onClick={deleteAllHandler}>delete all</button>
+        {imagedata.length > 0 && (
+          <button onClick={deleteAllHandler}>delete all</button>
+        )}
       </div>
       <div
         style={{
