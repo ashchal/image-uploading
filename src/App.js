@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import ImageUpload from "./imageUpload";
+import { ImageUpload } from "./imageUpload";
 
 function App() {
   const [image, setImage] = useState([]);
@@ -14,8 +14,9 @@ function App() {
         buttonStyle={{ background: "red", display: "inline-block" }}
         multiple
         title="upload image"
+        buttonclick={<div>click</div>}
       >
-        {({ imageData, onRemove, deleteAllHandler }) => (
+        {({ onUploadImage, imageData, onRemove, deleteAllHandler }) => (
           <div>
             <div>
               {imageData.length > 0 && (
